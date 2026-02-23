@@ -1,0 +1,125 @@
+.player-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background: #000000;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 2rem;
+  background: #111111;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.card-join {
+  max-width: 400px;
+  width: 100%;
+}
+
+.input-player-name,
+.input-room-code {
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.input-player-name::placeholder,
+.input-room-code::placeholder {
+  color: #888888;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-join {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-join:hover {
+  background: #2563eb;
+}
+
+.player-layout {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.card-main {
+  flex: 2;
+}
+
+.card-players {
+  flex: 1;
+}
+
+.players-list {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.btn-buzz {
+  width: 100%;
+  background: #3b82f6;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.btn-buzz:hover {
+  background: #2563eb;
+}
+
+.buzz-notification {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #facc15;
+  color: #111111;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 900px) {
+  .player-layout {
+    flex-direction: column;
+  }
+}
