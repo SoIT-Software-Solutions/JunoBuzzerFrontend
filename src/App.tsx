@@ -26,7 +26,7 @@ function App() {
   const [playerName, setPlayerName] = useState("");
   const [players, setPlayers] = useState<string[]>([]);
   const [firstBuzz, setFirstBuzz] = useState<string>("");
-  const [gameStarted, setGameStarted] = useState<boolean>(false);
+  const [_gameStarted, setGameStarted] = useState<boolean>(false);
 
   useEffect(() => {
     socket.on("lobby_update", (data) => setPlayers(data.players));
